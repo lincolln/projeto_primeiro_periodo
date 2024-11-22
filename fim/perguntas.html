@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum de Dúvidas</title>
+    <link rel="stylesheet" href="pergunta.css">
+</head>
+
+
+<body>
+   <header class="cabecalho"> 
+    <div class="começo">
+        <h1>Fórum de Dúvidas</h1>
+        <h2>Tem dúvidas sobre seus direitos? Pergunte aqui e veja as dúvidas de outras pessoas!</h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="1.html">Início</a></li>
+            <li><a href="perguntas.html">duvidas</a></li>
+        </ul>
+    </nav></header>
+    <div class="grid-container">
+        <div class="card">
+            <h2>Envie sua Pergunta</h2>
+            <form id="questionForm">
+                <textarea id="questionInput" placeholder="Digite sua pergunta aqui..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>Perguntas Enviadas</h2>
+            <ul id="questionList">
+            </ul>
+        </div>
+    </div>
+    <script>
+       
+        const form = document.getElementById('questionForm');
+        const questionInput = document.getElementById('questionInput');
+        const questionList = document.getElementById('questionList');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+            
+            const questionText = questionInput.value.trim();
+            
+            if (questionText !== "") {
+                
+                const newQuestion = document.createElement('li');
+                newQuestion.textContent = questionText;
+        
+                questionList.appendChild(newQuestion);
+
+                questionInput.value = "";
+            }
+        });
+    </script>
+</body>
+</html>

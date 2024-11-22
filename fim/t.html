@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direitos Trabalhistas</title>
+    <link rel="stylesheet" href="t.css">
+</head>
+<body>
+    
+    <header class="cabecalho"> 
+      <div class="começo">
+        <h1>Direitos Trabalhistas</h1>
+        <h2>Precisamos conhecer nossos direitos no trabalho para podermos cobrá-los.<br> Não somos escravos!</h2>
+    </div>
+      <nav>
+          <ul>
+              <li><a href="1.html">Início</a></li>
+              <li><a href="perguntas.html">duvidas</a></li>
+              <li><a href="m.html">map</a></li>
+          </ul>
+      </nav>
+  </header>
+
+    <div class="grid-container">
+        <div class="card">
+            <h2>Jornada de Trabalho e Horas Extras</h2>
+            <div class="dentro"><h3>
+                A Constituição Federal limita a jornada de trabalho a 44 horas semanais. Veja mais detalhes:
+            </h3>
+                Conforme o Art. 7º, inciso XIII da Constituição Federal, o trabalhador pode realizar horas extras com adicional de 50% ou mais sobre o valor da hora normal, respeitando a carga máxima diária de 10 horas.
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Férias Remuneradas</h2>
+            <div class="dentro"><h3>
+                O trabalhador tem direito a 30 dias de férias anuais. Clique para mais informações:
+            </h3>
+                A CLT, em seu Art. 129, assegura que as férias devem ser remuneradas com acréscimo de 1/3 do salário. Além disso, o trabalhador deve ser comunicado com pelo menos 30 dias de antecedência.
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Salário Mínimo Garantido</h2>
+            <div class="dentro"><h3>
+                O salário mínimo nacional é reajustado periodicamente. Saiba mais:
+            </h3>
+                Segundo o Art. 7º, inciso IV da Constituição Federal, o salário mínimo deve garantir as necessidades básicas do trabalhador e de sua família, como alimentação, saúde, moradia e transporte.
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>13º Salário</h2>
+            <div class="dentro"><h3>
+                O trabalhador tem direito ao 13º salário anual. Veja mais detalhes:
+            </h3>
+                A Lei nº 4.090/1962 estabelece o pagamento do 13º salário em duas parcelas: a primeira até 30 de novembro e a segunda até 20 de dezembro. Ele é proporcional aos meses trabalhados no ano.
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Condições Seguras de Trabalho</h2>
+            <div class="dentro"><h3>
+                O empregador deve garantir segurança e saúde no ambiente de trabalho. Saiba mais:
+            </h3>
+                As Normas Regulamentadoras (NRs) definem os requisitos mínimos de segurança. O fornecimento de Equipamentos de Proteção Individual (EPIs) é obrigatório e regulado pelo Art. 157 da CLT.
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Licença-Maternidade</h2>
+            <div class="dentro"><h3>
+                A Constituição assegura o direito à licença-maternidade para todas as trabalhadoras. Clique para mais:
+            </h3>
+                O Art. 7º, inciso XVIII, da Constituição e a CLT garantem licença-maternidade de 120 dias, podendo ser prorrogada por até 60 dias em empresas que participem do Programa Empresa Cidadã.
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Licença-Paternidade</h2>
+            <div class="dentro"><h3>
+                Trabalhadores têm direito à licença-paternidade de 5 dias, com possibilidade de prorrogação. Saiba mais:
+            </h3>
+                Regulada pelo Art. 7º, inciso XIX, da Constituição Federal, a licença-paternidade pode ser estendida para 20 dias para empresas aderentes ao Programa Empresa Cidadã.
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll('.mover').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.previousElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            button.textContent = content.style.display === 'block' ? 'Mostrar Menos' : 'Mostrar Mais';
+        });
+    });
+</script>
+</html>

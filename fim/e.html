@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direitos Estudantis</title>
+    <link rel="stylesheet" href="t.css"> 
+</head>
+<body>
+    <header class="cabecalho"> 
+        <div class="começo">
+            <h1>Direitos Estudantis</h1>
+            <h2>Conheça seus direitos como estudante para garantir uma educação justa e acessível.<br> A educação é um direito, não um privilégio!</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1.html">Início</a></li>
+                <li><a href="perguntas.html">duvidas</a></li>
+                <li><a href="m.html">map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid-container">
+
+        <div class="card">
+            <h2>Material e Transporte Escolar Gratuito</h2>
+            <div class="dentro">
+                <h3>Todos os estudantes da rede pública têm direito ao material e transporte escolar gratuito.</h3>
+                <p>Conforme o Art. 208 da Constituição Federal, é dever do Estado garantir transporte, alimentação e material didático gratuito para os estudantes da educação básica da rede pública.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+
+        <div class="card">
+            <h2>Apoio Psicológico e Acessibilidade</h2>
+            <div class="dentro">
+                <h3>É obrigatório o apoio psicológico e a acessibilidade nas instituições de ensino.</h3>
+                <p>De acordo com a Lei nº 13.935/2019, as escolas devem oferecer serviços de psicologia e assistência social para atender às necessidades dos estudantes. Além disso, a Lei nº 13.146/2015 garante a acessibilidade para pessoas com deficiência.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+
+        <div class="card">
+            <h2>Bolsa de Estudos e Financiamento</h2>
+            <div class="dentro">
+                <h3>Os estudantes têm acesso a programas de bolsas e financiamento estudantil.</h3>
+                <p>O Programa Universidade para Todos (ProUni) e o Fundo de Financiamento Estudantil (FIES) são iniciativas que facilitam o acesso ao ensino superior, conforme disposto na Lei nº 11.096/2005 e na Lei nº 10.260/2001.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+
+        <div class="card">
+            <h2>Meia-Entrada para Eventos Culturais</h2>
+            <div class="dentro">
+                <h3>Estudantes têm direito a meia-entrada em eventos culturais, esportivos e de lazer.</h3>
+                <p>Segundo a Lei nº 12.933/2013, estudantes devidamente matriculados e com carteirinha válida têm direito à meia-entrada em cinemas, shows, teatros e eventos esportivos.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+
+        <div class="card">
+            <h2>Gratuidade no ENEM para Alunos de Escola Pública</h2>
+            <div class="dentro">
+                <h3>Alunos da rede pública podem fazer o ENEM sem custos.</h3>
+                <p>Conforme o edital do Exame Nacional do Ensino Médio (ENEM), alunos da última série do ensino médio em escolas públicas têm direito à isenção total da taxa de inscrição.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+
+        <div class="card">
+            <h2>Merenda Escolar de Qualidade</h2>
+            <div class="dentro">
+                <h3>A alimentação escolar é garantida pela legislação brasileira.</h3>
+                <p>A Lei nº 11.947/2009 assegura a alimentação saudável e adequada para os estudantes da rede pública de ensino, com prioridade para alimentos da agricultura familiar.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Direito à Educação de Qualidade</h2>
+            <div class="dentro">
+                <h3>Todo estudante tem o direito a uma educação pública gratuita e de qualidade.</h3>
+                <p>O Art. 206 da Constituição Federal garante que a educação será baseada na igualdade de condições para o acesso e permanência na escola, com padrão de qualidade e gestão democrática do ensino público.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Proibição de Discriminação nas Escolas</h2>
+            <div class="dentro">
+                <h3>É dever das escolas combater qualquer forma de discriminação e preconceito.</h3>
+                <p>De acordo com a Lei nº 9.394/1996 (LDB), o ensino deve promover a tolerância e o respeito às diversidades étnicas, culturais, religiosas e de gênero.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+        <div class="card">
+            <h2>Assistência Estudantil no Ensino Superior</h2>
+            <div class="dentro">
+                <h3>Estudantes de baixa renda têm direito à assistência estudantil para permanência na universidade.</h3>
+                <p>O Decreto nº 7.234/2010 regulamenta o Plano Nacional de Assistência Estudantil (PNAES), que oferece benefícios como bolsas, alimentação, transporte e moradia para estudantes de instituições federais.</p>
+            </div>
+            <button class="mover">Mostrar Mais</button>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll('.mover').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.previousElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            button.textContent = content.style.display === 'block' ? 'Mostrar Menos' : 'Mostrar Mais';
+        });
+    });
+</script>
+</html>

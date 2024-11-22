@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Prefeituras</title>
+    <link rel="stylesheet" href="m.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header class="cabecalho"> 
+        <div class="começo">
+            <h1>map</h1>
+            <h2>
+             prefeituras do Rio de Janeiro
+            </h2>
+          </div>
+        <nav>
+            <ul>
+                <li><a href="1.html">Início</a></li>
+                <li><a href="perguntas.html">duvidas</a></li>
+                <li><a href="m.html">map</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Obtendo localização...</h2>
+        <div id="mapid"></div>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        let h2 = document.querySelector('h2');
+        let map;
+
+        
+        const prefeituras = [
+            { nome: "Prefeitura do Rio de Janeiro", lat: -22.9068, lng: -43.1729 },
+            { nome: "Prefeitura de Niterói", lat: -22.8832, lng: -43.1034 },
+            { nome: "Prefeitura de Duque de Caxias", lat: -22.7868, lng: -43.3045 },
+            { nome: "Prefeitura de São Gonçalo", lat: -22.8268, lng: -43.0634 },
+            { nome: "Prefeitura de Nova Iguaçu", lat: -22.7557, lng: -43.4602 },
+            { nome: "Prefeitura de Belford Roxo", lat: -22.7641, lng: -43.3992 },
+            { nome: "Prefeitura de Magé", lat: -22.6575, lng: -43.0313 },
+            { nome: "Prefeitura de Itaboraí", lat: -22.7528, lng: -42.8635 },
+        ];
+
+  
+        function success(pos) {
+            const userLat = pos.coords.latitude;
+            const userLng = pos.coords.longitude;
+            h2.textContent = `Sua localização: Latitude ${userLat.toFixed(4)}, Longitude ${userLng.toFixed(4)}`;
+
+            if (map === undefined) {
+                map = L.map('mapid').setView([userLat, userLng], 10);
+            } else {
+                map.remove();
+                map = L.map('mapid').setView([userLat, userLng], 10);
+            }
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker([userLat, userLng]).addTo(map)
+                .bindPopup('Você está aqui!')
+                .openPopup();
+
+            prefeituras.forEach(p => {
+                L.marker([p.lat, p.lng]).addTo(map)
+                    .bindPopup(`<strong>${p.nome}</strong>`)
+                    .openPopup();
+            });
+        }
+
+        function error(err) {
+            console.error(err);
+            h2.textContent = "Não foi possível obter a localização.";
+        }
+
+        navigator.geolocation.watchPosition(success, error, {
+            enableHighAccuracy: true,
+            timeout: 5000
+        });
+    </script>
+</body>
+</html>

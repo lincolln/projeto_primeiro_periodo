@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direitos Estudantis</title>
+    <link rel="stylesheet" href="t.css"> 
+</head>
+<body>
+    <header class="cabecalho"> 
+        <div class="começo">
+            <h1>Direitos Estudantis</h1>
+            <h2>Conheça seus direitos como estudante para garantir uma educação justa e acessível.<br> A educação é um direito, não um privilégio!</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="1.html">Início</a></li>
+                <li><a href="perguntas.html">duvidas</a></li>
+                <li><a href="m.html">map</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="grid-container">
+    <div class="card">
+        <h2>Participação em Conselhos e Audiências Públicas</h2>
+        <div class="dentro">
+            <h3>Todo cidadão tem o direito de participar ativamente das decisões públicas.</h3>
+            <p>De acordo com o Art. 1º, parágrafo único, da Constituição Federal, o poder emana do povo e é exercido diretamente ou por meio de representantes. Conselhos e audiências públicas são ferramentas fundamentais para a democracia participativa, permitindo que os cidadãos opinem sobre políticas públicas.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+    <div class="card">
+        <h2>Acesso a Informações Públicas</h2>
+        <div class="dentro">
+            <h3>Cidadãos têm o direito de acessar dados e documentos públicos.</h3>
+            <p>A Lei nº 12.527/2011, conhecida como Lei de Acesso à Informação, assegura que qualquer pessoa pode solicitar informações de órgãos públicos, promovendo a transparência e o controle social sobre as ações governamentais.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+    <div class="card">
+        <h2>Proteção Contra Abuso de Poder Público</h2>
+        <div class="dentro">
+            <h3>O Estado deve respeitar os direitos individuais e coletivos dos cidadãos.</h3>
+            <p>O Art. 5º da Constituição Federal garante ampla defesa e contraditório, proibindo abusos de autoridade. Além disso, a Lei nº 13.869/2019 estabelece penalidades para agentes públicos que excedam seus limites legais.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+    <div class="card">
+        <h2>Direito de Petição e Representação</h2>
+        <div class="dentro">
+            <h3>Cidadãos podem solicitar providências ou representar seus interesses perante os órgãos públicos.</h3>
+            <p>O Art. 5º, inciso XXXIV, da Constituição Federal, assegura o direito de petição como um instrumento democrático para reivindicar direitos ou apresentar queixas, sem necessidade de advogado.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+    <div class="card">
+        <h2>Voto e Participação Eleitoral</h2>
+        <div class="dentro">
+            <h3>O voto é um direito e dever de todo cidadão brasileiro maior de 16 anos.</h3>
+            <p>Conforme o Art. 14 da Constituição Federal, o voto é direto e secreto, sendo obrigatório para maiores de 18 anos e facultativo para jovens entre 16 e 17 anos, idosos acima de 70 e analfabetos.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+    <div class="card">
+        <h2>Direito à Liberdade de Expressão</h2>
+        <div class="dentro">
+            <h3>Cidadãos têm o direito de expressar suas opiniões livremente.</h3>
+            <p>De acordo com o Art. 5º, inciso IV, da Constituição Federal, a liberdade de expressão é assegurada, sendo vedado o anonimato. Ela é essencial para a participação democrática e controle social.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+    <div class="card">
+        <h2>Direito à Manifestação Pacífica</h2>
+        <div class="dentro">
+            <h3>Cidadãos podem se reunir pacificamente para expressar suas demandas.</h3>
+            <p>Conforme o Art. 5º, inciso XVI, da Constituição Federal, todos têm o direito de se reunir, pacificamente e sem armas, em locais abertos ao público, desde que com aviso prévio à autoridade competente.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+    <div class="card">
+        <h2>Acesso à Justiça</h2>
+        <div class="dentro">
+            <h3>Todos têm direito de buscar proteção de seus direitos na Justiça.</h3>
+            <p>O Art. 5º, inciso XXXV, da Constituição Federal, assegura que nenhum direito pode ser excluído da apreciação do Poder Judiciário. O acesso à Justiça é um pilar essencial do Estado Democrático de Direito.</p>
+        </div>
+        <button class="mover">Mostrar Mais</button>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.mover').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.previousElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            button.textContent = content.style.display === 'block' ? 'Mostrar Menos' : 'Mostrar Mais';
+        });
+    });
+</script>
+</html>
